@@ -7,39 +7,67 @@
     <title>Emergency Hotline</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="border-2">
-    <nav class="nav flex w-[95vw] lg:w-[90vw] justify-around lg:justify-between  items-center mx-auto lg:my-[24px] my-[15px]">
+    <nav
+        class="nav flex w-[95vw] lg:w-[90vw] justify-around lg:justify-between  items-center mx-auto lg:my-[24px] my-[15px]">
         <div class="logo flex items-center justify-start gap-2 ">
             <img class="lg:h-[50px] lg:w-[50px] h-[30px] w-[30px]" src="assets/logo.png" alt="Emergency service">
-            <h1 class="logo-heading text-sm lg:text-xl lg:w-[135px] w-[90px] lg:h-[45px] h-[45px] text-[#006747] font-extrabold">Emergency <br>Services</h1>
+            <h1
+                class="logo-heading text-sm lg:text-xl lg:w-[135px] w-[90px] lg:h-[45px] h-[45px] text-[#006747] font-extrabold">
+                Emergency <br>Services</h1>
         </div>
         <div class="coin-container flex gap-3">
-            <div class="heart flex items-center lg:h-[50px] lg:w-[90px] bg-[#41FF6B1A] rounded-3xl justify-center w-[50px] h-[25px]">
+            <div
+                class="heart flex items-center lg:h-[50px] lg:w-[90px] bg-[#41FF6B1A] rounded-3xl justify-center w-[50px] h-[25px]">
                 <p class="font-bold text-lg lg:text-xl">0</p>
                 <img class=" h-[15px] w-[15px] lg:h-[30px] lg:w-[30px]" src="assets/heart.png" alt="hearted number">
             </div>
-            <div class="coin flex items-center lg:h-[50px] lg:w-[90px] bg-[#41FF6B1A] rounded-3xl justify-center w-[50px] h-[25px]">
+            <div
+                class="coin flex items-center lg:h-[50px] lg:w-[90px] bg-[#41FF6B1A] rounded-3xl justify-center w-[50px] h-[25px]">
                 <p class="font-bold text-lg lg:text-xl">100</p>
                 <img class="h-[15px] w-[15px] lg:h-[30px] lg:w-[30px]" src="assets/coin.png" alt="coin for call">
             </div>
-            <div class="copy flex items-center lg:h-[50px] lg:w-[90px] bg-[#00a63e] rounded-3xl justify-center  gap-1 w-[60px] h-[25px]">
+            <div
+                class="copy flex items-center lg:h-[50px] lg:w-[90px] bg-[#00a63e] rounded-3xl justify-center  gap-1 w-[60px] h-[25px]">
                 <span class="font-bold text-sm lg:text-xl text-white">0</span>
                 <p class="font-bold text-sm lg:text-lg text-white">Copy</p>
             </div>
         </div>
     </nav>
 
-    <div class="banner flex flex-col items-center justify-center bg-[linear-gradient(90deg,#013123,#006747_50%,#013223_100%)] w-full lg:h-[300px] h-[300px]">
+    <div
+        class="banner flex flex-col items-center justify-center bg-[linear-gradient(90deg,#013123,#006747_50%,#013223_100%)] w-full lg:h-[300px] h-[300px]">
         <img class="lg:w-[95px] lg:h-[95px] w-[60px] h-[60px]" src="assets/logo-dark.png" alt="">
         <h1 class="text-center text-white mt-3 font-bold lg:text-[40px] text-[28px]">Emergency Service Directory</h1>
-        <p class="text-center text-white lg:text-[20px] text-[12px] w-[70vw] lg:w[80vw] font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+        <p class="text-center text-white lg:text-[20px] text-[12px] w-[70vw] lg:w[80vw] font-semibold">Government
+            Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
     </div>
 
     <div class="service-card-container bg-[#41FF6B1A] h-[100vh]">
-        <div class="card-container">
-            
+        <div class="card-container p-8">
+            <div class="card bg-white w-[300px] h-[290px] lg:w-[250px] lg:h-[250px] p-3  border 2">
+                <div class="upside flex items-center justify-between">
+                    <div class="h-[35px] w-[35px] bg-[#FFE3E2] flex justify-center items-center rounded-xl">
+                        <img class="h-[20px] w-[20px]" src="assets/emergency.png" alt="">
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h2 class="font-bold text-[16px] mt-1">National Emergency Number</h2>
+                <p class="font-semibold text-gray-400 text-sm">National Emergency</p>
+                <h1 class="mt-6 text-[20px] font-bold">999</h1>
+                <div class="catagory h-[20px] w-[40px] bg-gray-300 flex items-center justify-center rounded-lg mt-2 lg:h-[25px] lg:w-[50px] ">
+                    <p class="text-[12px] font-semibold">All</p>
+                </div>
+                <div class="button-container mt-4 w-[100%] flex justify-center gap-2">
+                    <button class="btn w-[45%]"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="btn w-[45%]"><i class="fa-solid fa-phone"></i>Call</button>
+                </div>
+            </div>
         </div>
         <div class="history-container">
             <div>
