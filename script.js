@@ -16,7 +16,29 @@ for (const callbutton of callButtons) {
         const card = event.target.closest('.card');
         const callingTo = card.querySelector('p.font-semibold');
         const number = card.querySelector('h1');
-        alert(`Calling to ${callingTo.innerText} ${number.innerText} ...`)
+        if (availableCoin >= 20) {
+            alert(`Calling to ${callingTo.innerText} ${number.innerText} ...`);
+            const newAvailableCoin = availableCoin - 20;
+            document.getElementById('call-coin').innerText = newAvailableCoin;
+        }
+        else{
+            alert("insufficient coin!! Minimum 20 coin needed for calling any services");
+        }
 
+
+    })
+}
+
+// copy button 
+const copyButton = document.getElementsByClassName('btn-copy');
+for(const btn of copyButton){
+    btn.addEventListener('click', function(event){
+        let initialCopy = parseInt(document.getElementById('copy-count').innerText);
+        const card = event.target.closest('.card');
+        const numberPtag = card.querySelector('h1').innerText;
+        console.log(numberPtag)
+        alert(`Copied The Number ${numberPtag}`);
+        initialCopy = initialCopy + 1
+        document.getElementById('copy-count').innerText = initialCopy;
     })
 }
