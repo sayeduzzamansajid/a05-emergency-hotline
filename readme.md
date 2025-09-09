@@ -1,165 +1,29 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
+# Qus no -1: What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+### getElementById is a function that takes a perameter that is a id and it returns the element which have that particular Id, same getElementByClassName also same but it get all the element those have the same class, and both are Html collection.
+### querySelector is nodelist that returns only one element that is mached first with the perameter, and querySelectorAll brings all the matched item and returns a array like object.
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
+# Qus no -2: How do you create and insert a new element into the DOM?
 
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
-
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
+### To create a new element we have to get the parent element from document, then declare a variable and create new element by the function createElement( ) for insert a new element get the parent and create new then parent.appenChild(createdElement) such as
+``` 
+const parent = document.getElementById('container')
+const newChild = document.createElement('div')
+newChild.inerHTML = `<p>created new child paragraph</p>`
+parent.appendChild(newChild)
 ```
 
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
+# Qus no -3: What is Event Bubbling and how does it work?
 
-💡Hint: Search Google with that below question
+### Event bubbling is a event handling concept where an event triggered on a child element or anywhere then at first it search the target where the event triggered from root to target, then after finding it propagates its parent elements in the DOM tree until it reaches the root (document).
 
-```bash
-How to get current local time in js
-```
+# Qus no -4: What is Event Delegation in JavaScript? Why is it useful?
 
----
+### event delegation in js is instead of attaching event listeners to multiple child elements individually, attach a single event listener to a common parent element, and then use event bubbling to handle events on its children.
 
-## ⚙️ Technology Stack
+### useful because it cleaner the code and than make easy to handle and manage
 
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
+# Qus no -5: What is the difference between preventDefault() and stopPropagation() methods?
 
----
+### preventDefault() is a function that prevents reload when button clicked and by default button type is set to submit, so this function prevent the submit and prevent the page from reload.
 
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
+### stopPropagation() is also a function that stops the event bubbling to upper layer/ to parent layer, it stop upper bubbling , but same layer multiple event can triggered.

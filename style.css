@@ -9,6 +9,9 @@
 .btn-copy:hover{
     background-color: rgba(11, 11, 11, 0.652);
 }
+.card{
+    box-shadow: 5px 5px 10px  gray ;
+}
 .history{
     display: flex;
     justify-content: space-between;
