@@ -1,0 +1,17 @@
+.history{
+    display: flex;
+    justify-content: space-between;
+    width: 22vw;
+    margin: 0 auto;
+    background-color: rgba(211, 211, 211, 0.389);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 576px) {
+    .history{
+        width: 80vw;
+    }
+    
+}
