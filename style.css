@@ -1,3 +1,14 @@
+.clear-btn:hover{
+    transform: scale(1.05);
+    background-color: lightgreen;
+    color: black;
+}
+.btn-call:hover{
+    background-color: rgba(145, 239, 145, 0.859);
+}
+.btn-copy:hover{
+    background-color: rgba(11, 11, 11, 0.652);
+}
 .history{
     display: flex;
     justify-content: space-between;
@@ -15,3 +26,4 @@
     }
     
 }
+

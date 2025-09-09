@@ -58,14 +58,42 @@ for (const callbutton of callButtons) {
 }
 
 // copy button functionality and event 
+// const copyButton = document.getElementsByClassName('btn-copy');
+// for(const btn of copyButton){
+//     btn.addEventListener('click', function(event){
+//         let initialCopy = parseInt(document.getElementById('copy-count').innerText);
+//         const card = event.target.closest('.card');
+//         const numberPtag = card.querySelector('h1').innerText;
+//         alert(`Copied The Number ${numberPtag}`);
+//         initialCopy = initialCopy + 1
+//         document.getElementById('copy-count').innerText = initialCopy;
+//     });}
+
 const copyButton = document.getElementsByClassName('btn-copy');
-for(const btn of copyButton){
-    btn.addEventListener('click', function(event){
-        let initialCopy = parseInt(document.getElementById('copy-count').innerText);
+
+for (const btn of copyButton) {
+    btn.addEventListener('click', async function(event) {
         const card = event.target.closest('.card');
         const numberPtag = card.querySelector('h1').innerText;
-        alert(`Copied The Number ${numberPtag}`);
-        initialCopy = initialCopy + 1
-        document.getElementById('copy-count').innerText = initialCopy;
+
+        try {
+            await navigator.clipboard.writeText(numberPtag);
+            alert(`Copied The Number ${numberPtag}`);
+        } catch (err) {
+            console.error('Copy failed', err);
+        }
+
+        let initialCopy = parseInt(document.getElementById('copy-count').innerText);
+        document.getElementById('copy-count').innerText = initialCopy + 1;
     });
 }
+
+
+
+// clear button functionality and event 
+
+document.getElementById('btn-clear').addEventListener('click',function(event){
+    const historyContainer = document.getElementById('history-container');
+    historyContainer.innerHTML = '';
+    
+})
